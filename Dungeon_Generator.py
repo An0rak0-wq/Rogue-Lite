@@ -9,4 +9,5 @@ def Generate_Dungeon(size):
         for y in range(0, size):
             dungeon[x][y] = random.choice(ROOM_TYPES)
 
+    dungeon[0][0] = 'Empty'
     return dungeon

@@ -1,3 +1,5 @@
+import random
+
 from Dungeon_Generator import Generate_Dungeon
 from Choice_Computer import Choice_Computer
 from Main_Menu import Main_Menu
@@ -15,6 +17,7 @@ PLAYER_STATS = {
     'Health': 10,
     'Attack': 3,
     'Defence': 3,
+    'Gold': 0,
 }
 
 PLAYER_EQUIPMENT = {
@@ -30,7 +33,6 @@ while PLAYER_STATS['Health'] > 0:
 
     if Choice == '1':
         Dungeon = Generate_Dungeon(LEVEL_INFO['Size'])
-        print(Dungeon)
         Coordinates = [0, 0]
 
         while PLAYER_STATS['Health'] > 0:
@@ -40,6 +42,12 @@ while PLAYER_STATS['Health'] > 0:
             
             if Room_String != None:
                 print(Room_String)
+
+            if Room == 'Treasure':
+                Gold = int(random.uniform(0, 1) ** 2 * 24) + 1 #gives gold from 1 to 25 pieces, weighted heavily towards 1
+                PLAYER_STATS['Gold'] += Gold
+                print(f'You open the treasure chest, and within you find {Gold} gold. You now have {PLAYER_STATS["Gold"]} gold.')
+                Dungeon[Coordinates[0]][Coordinates[1]] = 'Empty'
 
             if Enemy != None:
                 ENEMY_STATS = Enemy_Creator(Enemy)

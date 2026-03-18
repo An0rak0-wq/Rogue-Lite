@@ -32,5 +32,5 @@ def Enemy_Creator(Type):
         return ENEMY
     elif Type == 'goblin':
         ENEMY = GOBLIN
-        ENEMY['Health'] = random.randint(7, 13)
+        ENEMY['Health'] = random.randint(6, 11)
         return ENEMY
