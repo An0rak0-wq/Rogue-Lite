@@ -55,7 +55,7 @@ def Player_Turn(PLAYER_STATS, PLAYER_EQUIPMENT, PLAYER_ABILITIES, ENEMY_STATS, S
             'Enemy_Type': ENEMY_STATS['Enemy_Type'],
         }
     elif Ability == 'Strong':
-        Damage = ENEMY_STATS['Defence'] - (PLAYER_STATS['Attack'] + PLAYER_EQUIPMENT['Attack']) + random.randint(1, 4)
+        Damage = ENEMY_STATS['Defence'] - ((PLAYER_STATS['Attack'] + PLAYER_EQUIPMENT['Attack']) + random.randint(1, 3))
 
         if Damage < 0:
             Damage = abs(Damage)
