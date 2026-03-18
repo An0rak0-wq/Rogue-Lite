@@ -65,11 +65,11 @@ while PLAYER_STATS['Health'] > 0:
             Coordinates = New_Coords(input('> ').strip().upper(), Coordinates)
 
             if Coordinates[0] == 4 and Coordinates[1] == 4:
-                print('You have reached the end of this dungeon. Before you stand three options:'
-                      'First, the red gate. Within must lie a powerful boss. Beat him and you will be'
-                      'duly rewarded. Second, the blue gate, the gate of the weak. For those who do not'
-                      'wish to test themselves against the worst this realm has to offer, you may'
-                      'enter this gate, and the dungeon shall be renewed. Finally, the black gate.'
+                print('You have reached the end of this dungeon. Before you stand three options: '
+                      'First, the red gate. Within must lie a powerful boss. Beat him and you will be '
+                      'duly rewarded. Second, the blue gate, the gate of the weak. For those who do not '
+                      'wish to test themselves against the worst this realm has to offer, you may '
+                      'enter this gate, and the dungeon shall be renewed. Finally, the black gate. '
                       'Walk through this gate, and all life will cease to end. Enter your choice: ')
     elif Choice == '2':
         print('Just play the game')
